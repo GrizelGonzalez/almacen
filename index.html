@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- Material Kit CSS -->
+    <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+</head>
+
+<body>
+<div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white">
+        <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+        Tip 2: you can also add an image using data-image tag
+    -->
+        <div class="logo">
+            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                Almacén
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="views/productos/crear_producto.html">
+                        <i class="material-icons">add</i>
+                        <p>Crear producto</p>
+                    </a>
+                </li>
+
+                <!-- your sidebar here -->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#0">
+                        <i class="material-icons">list</i>
+                        <p>Lista de productos</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <a class="navbar-brand" href="javascript:;">Inicio</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Búscar" aria-label="Search">
+                                <button class="btn btn-primary btn-fab btn-fab-mini btn-round">
+                                    <i class="material-icons">search</i>
+                                </button>
+                            </form>
+                        </li>
+                        <!-- your navbar here -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="content">
+            <div class="container-fluid">
+
+                <!-- your content here -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-icon card-header-primary">
+                                <div class="card-icon">
+                                    <i class="material-icons">home</i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Descripción del sitio web</h4>
+
+                                <button class="btn btn-primary" onclick="alert()" >SweetAlert</button><p></p>
+
+                                <button class="btn btn-primary" onclick="toast()" >ToastAlert</button><p></p>
+
+                                <nav>
+                                    <table class="table">
+                                        <thead class="thead-dark">
+                                        <tr>
+                                            <th>HTML</th>
+                                            <th>CSS</th>
+                                            <th>JS</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="./views/tablas.html">Tablas</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/mi_primer_css.html">Mi primer código en CSS</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/variables.html">Variables</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="./views/colores.html">Colores</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/selectores.html">Selectores</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/numerico.html">Numérico</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="./views/imagenes.html">Imágenes</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/medidas.html">Medidas</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/boolean.html">Boolean</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="./views/video-audio.html">Video y audio</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/bordes.html">Bordes</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/listas.html">Listas</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="./views/formulario.html">Formulario</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/fondo.html">Fondo con imágen</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/objetos.html">Objetos</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/transform.html">Transform</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/if.html">Condición if</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="./views/css/transition.html">transiciones</a>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/switch.html">Switch</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/ciclos.html">Ciclos</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/funciones.html">Funciones</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/dom.html">DOM</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="./views/js/eventos.html">Eventos</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End content -->
+            </div>
+        </div>
+
+        <!-- pie de página -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="float-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Mi empresa
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright float-right">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </div>
+                <!-- your footer here -->
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    function alert(){
+        Swal.fire('Mensaje de SweetAlert')
+    }
+
+
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true
+    })
+
+    function toast(){
+        Toast.fire({
+            icon: 'success',
+            title: 'Acción realizada correctamente'
+        })
+    }
+
+</script>
+</body>
+
+</html>
