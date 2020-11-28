@@ -1,5 +1,5 @@
 <?php
-include('../../layout/header.php');
+include('.../almacen/layout/header.php');
 include('.../almacen/layout/sidebar.php');
 include('../almacen/layout/navbar.php');
 ?>
