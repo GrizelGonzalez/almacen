@@ -20,6 +20,22 @@
                   </button>
                 </form>
               </li>
+              <li class="nav-item">
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">person</i>
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="../users/profile.php">Mi perfil</a>
+                    <a class="dropdown-item" href="#">Alguna acción</a>
+                    <a class="dropdown-item" href="#">Otra acción</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                  </div>
+                </div>
+                              
+              </li>
               <!-- your navbar here -->
             </ul>
           </div>
