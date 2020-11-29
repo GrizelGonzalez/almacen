@@ -14,4 +14,6 @@
   <link href="../../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
 </head>
 <body>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <div class="wrapper ">
