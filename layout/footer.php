@@ -18,7 +18,7 @@
             </div>
             <!-- your footer here -->
           </div>
-        </footer>
+</footer>
       </div>
   </div>
   <!--   Core JS Files   -->

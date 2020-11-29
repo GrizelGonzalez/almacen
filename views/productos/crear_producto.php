@@ -1,10 +1,9 @@
 <?php
-include('.../almacen/layout/header.php');
-include('.../almacen/layout/sidebar.php');
-include('../almacen/layout/navbar.php');
+include('../../layout/header.php');
+include('../../layout/sidebar.php');
+include('../../layout/navbar.php');
 ?>
-
-      <div class="content">
+  <div class="content">
         <div class="container-fluid">
 
           <!-- your content here -->
@@ -64,5 +63,5 @@ include('../almacen/layout/navbar.php');
         </div>
 
 <?php
-include('../almacen/layout/footer.php');
+include('../../layout/footer.php');
 ?>
