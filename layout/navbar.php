@@ -21,8 +21,7 @@
                 </form>
               </li>
               <li class="nav-item">
-                <div class="dropdown show">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="btn btn-secondary" href="../notifications/sweetAlert.php">
                     <i class="material-icons">person</i>
                   </a>
                 
