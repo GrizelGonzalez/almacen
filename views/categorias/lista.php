@@ -18,9 +18,10 @@ include('../../layout/header.php');
 include('../../layout/sidebar.php');
 include('../../layout/navbar.php');
 
-$consulta = "SELECT p.*, c.nombre as categoria FROM producto p INNER JOIN categoria c ON p.categoria_id = c.id;";
-$productos = $conexion->query($consulta);
+$consulta = "SELECT c.* FROM categoria c";
+$categorias = $conexion->query($consulta);
 ?>
+
 <div class="content">
   <div class="container-fluid">
     <div class="row">
@@ -32,31 +33,27 @@ $productos = $conexion->query($consulta);
             </div>
           </div>
           <div class="card-body">
-            <h3>Lista de productos</h3>
+            <h3>Lista de categorias</h3>
             <table class="table">
               <thead>
                 <tr>
                   <th>Nombre</th>
-                  <th>Descripción</th>
-                  <th>Categoría</th>
-                  <th>Precio</th>
-                  <th>Stock</th>
+                  <th cellpadding="3"></th>
+                  <th cellpadding="3"></th>
                   <th>Acciones</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
-                foreach ($productos as $producto) {
+                foreach ($categorias as $categoria) {
                   echo "
                         <tr>
-                          <td>{$producto['nombre']}</td>
-                          <td>{$producto['descripcion']}</td>
-                          <td>{$producto['categoria']}</td>
-                          <td>{$producto['precio']}</td>
-                          <td>{$producto['stock']}</td>
+                          <td>{$categoria['nombre']}</td>
+                          <td></td>
+                          <td></td>
                           <td>
-                            <a class='btn btn-info' href='editar.php?id={$producto['id']}'>editar</a> 
-                            <a class='btn btn-danger text-white' type='button' onclick='confirmDelete(\"../../requests/productos/delete.php?id={$producto['id']}\")'>eliminar</a>
+                            <a class='btn btn-info' href='editar.php?id={$categoria['id']}'>editar</a> 
+                            <a class='btn btn-danger text-white' type='button' onclick='confirmDelete(\"../../requests/categorias/delete.php?id={$categoria['id']}\")'>eliminar</a>
                           </td>
                         </tr>
                         ";

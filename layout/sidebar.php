@@ -8,7 +8,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="../productos/crear_producto.php">
+            <a class="nav-link" href="../productos/crear.php">
               <i class="material-icons">add</i>
               <p>Crear producto</p>
             </a>
@@ -20,6 +20,19 @@
               <p>Lista de productos</p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias/crear.php">
+              <i class="material-icons">add</i>
+              <p>Crear categoria</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../categorias/lista.php">
+              <i class="material-icons">list</i>
+              <p>Lista de categorias</p>
+            </li>
         </ul>
       </div>
     </div>
