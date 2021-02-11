@@ -22,13 +22,13 @@ $categoria = mysqli_fetch_assoc($resultadoCategoria);
             </div>
           </div>
           <div class="card-body">
-            <h3>Editar una categoria</h3>
+            <h3>Editar una categoría</h3>
             <form action="../../requests/categorias/update.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $categoria['id'] ?>">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="nombre">Nombre:</label>
-                  <input class="form-control" type="text" name="nombre" value="<?php echo $categoria['nombre'] ?>">
+                  <input class="form-control" type="text" name="nombre" value="<?php echo $categoria['nombre'] ?>" required>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary">Actualizar</button>

@@ -18,8 +18,8 @@ include('../../layout/header.php');
 include('../../layout/sidebar.php');
 include('../../layout/navbar.php');
 
-$consulta = "SELECT c.* FROM categoria c";
-$categorias = $conexion->query($consulta);
+$consulta = "SELECT * FROM ciudad";
+$ciudades = $conexion->query($consulta);
 ?>
 
 <div class="content">
@@ -33,7 +33,7 @@ $categorias = $conexion->query($consulta);
             </div>
           </div>
           <div class="card-body">
-            <h3>Lista de categorías</h3>
+            <h3>Lista de ciudades</h3>
             <table class="table">
               <thead>
                 <tr>
@@ -45,15 +45,15 @@ $categorias = $conexion->query($consulta);
               </thead>
               <tbody>
                 <?php
-                foreach ($categorias as $categoria) {
+                foreach ($ciudades as $ciudad) {
                   echo "
                         <tr>
-                          <td>{$categoria['nombre']}</td>
+                          <td>{$ciudad['nombre']}</td>
                           <td></td>
                           <td></td>
                           <td>
-                            <a class='btn btn-info' href='editar.php?id={$categoria['id']}'>editar</a> 
-                            <a class='btn btn-danger text-white' type='button' onclick='confirmDelete(\"../../requests/categorias/delete.php?id={$categoria['id']}\")'>eliminar</a>
+                            <a class='btn btn-info' href='editar.php?id={$ciudad['id']}'>editar</a> 
+                            <a class='btn btn-danger text-white' type='button' onclick='confirmDelete(\"../../requests/ciudad/delete.php?id={$ciudad['id']}\")'>eliminar</a>
                           </td>
                         </tr>
                         ";

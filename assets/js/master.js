@@ -1,3 +1,4 @@
+/*common sweet alert code*/
 const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -29,3 +30,37 @@ function confirmDelete(url) {
             };
         });
 }
+
+
+/*common validation code*/
+
+var trim = function(value) {
+    return $.trim(value);
+};
+
+var commonRules = {
+    required: true,
+    normalizer: trim
+};
+
+var highlight = function(element) {
+    $(element)
+      .closest('.form-group')
+      .addClass('has-danger');
+};
+
+var unhighlight = function(element) {
+    $(element)
+      .closest('.form-group')
+      .removeClass('has-danger')
+    .addClass('has-success');
+};
+
+var submitHandler = function(form) {
+    $(form).submit();
+};
+
+var invalidHandler = function() {
+    toast('error', 'Ingrese la información correctamente.');
+};
+

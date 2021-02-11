@@ -24,15 +24,30 @@
           <li class="nav-item">
             <a class="nav-link" href="../categorias/crear.php">
               <i class="material-icons">add</i>
-              <p>Crear categoria</p>
+              <p>Crear categoría</p>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="../categorias/lista.php">
               <i class="material-icons">list</i>
-              <p>Lista de categorias</p>
-            </li>
+              <p>Lista de categorías</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../ciudad/crear.php">
+              <i class="material-icons">add</i>
+              <p>Crear ciudad</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../ciudad/lista.php">
+              <i class="material-icons">list</i>
+              <p>Lista de ciudad</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

@@ -26,6 +26,8 @@
   <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
   <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="../../assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="../../assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
   <script src="../../assets/js/master.js"></script>
 </body>
 </html>

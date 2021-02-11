@@ -1,8 +1,14 @@
 <?php
+include('../../conexion/configuration.php');
 include('../../layout/header.php');
 include('../../layout/sidebar.php');
 include('../../layout/navbar.php');
 
+
+$ciudad_id = $_GET['id'];
+$consultaCiudad = "SELECT * FROM ciudad WHERE id = {$ciudad_id}";
+$resultadoCiudad =  mysqli_query($conexion, $consultaCiudad);
+$ciudad = mysqli_fetch_assoc($resultadoCiudad);
 ?>
 
 <div class="content">
@@ -12,19 +18,20 @@ include('../../layout/navbar.php');
         <div class="card">
           <div class="card-header card-header-icon card-header-primary">
             <div class="card-icon">
-              <i class="material-icons">add</i>
+              <i class="material-icons">edit</i>
             </div>
           </div>
           <div class="card-body">
-            <h3>Guardar una nueva categoría</h3>
-            <form action="../../requests/categorias/insert.php" method="POST">
+            <h3>Editar una ciudad</h3>
+            <form action="../../requests/ciudad/update.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $ciudad['id'] ?>">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="nombre">Nombre:</label>
-                  <input class="form-control" type="text" name="nombre" required>
+                  <input class="form-control" type="text" name="nombre" value="<?php echo $ciudad['nombre'] ?>" required>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Guardar</button>
+              <button type="submit" class="btn btn-primary">Actualizar</button>
             </form>
           </div>
         </div>

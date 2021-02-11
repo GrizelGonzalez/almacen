@@ -16,8 +16,8 @@ include('../../layout/navbar.php');
             </div>
           </div>
           <div class="card-body">
-            <h3>Guardar una nueva categoría</h3>
-            <form action="../../requests/categorias/insert.php" method="POST">
+            <h3>Guardar una nueva ciudad</h3>
+            <form action="../../requests/ciudad/insert.php" method="POST">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="nombre">Nombre:</label>
