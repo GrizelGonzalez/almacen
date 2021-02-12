@@ -13,10 +13,10 @@ if (isset($_SESSION['response'])) {
   }
 }
 session_destroy();
-include('../../conexion/configuration.php');
-include('../../layout/header.php');
-include('../../layout/sidebar.php');
-include('../../layout/navbar.php');
+include('../../config/connexion.php');
+include('../layout/header.php');
+include('../layout/sidebar.php');
+include('../layout/navbar.php');
 
 $consulta = "SELECT p.*, c.nombre as categoria FROM producto p INNER JOIN categoria c ON p.categoria_id = c.id;";
 $productos = $conexion->query($consulta);
@@ -72,5 +72,5 @@ $productos = $conexion->query($consulta);
 </div>
 
 <?php
-include('../../layout/footer.php');
+include('../layout/footer.php');
 ?>

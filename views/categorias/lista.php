@@ -13,10 +13,10 @@ if (isset($_SESSION['response'])) {
   }
 }
 session_destroy();
-include('../../conexion/configuration.php');
-include('../../layout/header.php');
-include('../../layout/sidebar.php');
-include('../../layout/navbar.php');
+include('../../config/connexion.php');
+include('../layout/header.php');
+include('../layout/sidebar.php');
+include('../layout/navbar.php');
 
 $consulta = "SELECT c.* FROM categoria c";
 $categorias = $conexion->query($consulta);
@@ -69,5 +69,5 @@ $categorias = $conexion->query($consulta);
 </div>
 
 <?php
-include('../../layout/footer.php');
+include('../layout/footer.php');
 ?>

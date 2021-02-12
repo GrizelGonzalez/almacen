@@ -1,7 +1,7 @@
 <!-- sidebar -->
 <div class="sidebar" data-color="purple" data-background-color="white">
       <div class="logo">
-        <a href="../../" class="simple-text logo-normal">
+        <a href="../../.." class="simple-text logo-normal">
           Almacén
         </a>
       </div>

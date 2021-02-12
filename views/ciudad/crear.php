@@ -1,7 +1,7 @@
 <?php
-include('../../layout/header.php');
-include('../../layout/sidebar.php');
-include('../../layout/navbar.php');
+include('../layout/header.php');
+include('../layout/sidebar.php');
+include('../layout/navbar.php');
 
 ?>
 
@@ -33,5 +33,5 @@ include('../../layout/navbar.php');
   </div>
 </div>
 <?php
-include('../../layout/footer.php');
+include('../layout/footer.php');
 ?>

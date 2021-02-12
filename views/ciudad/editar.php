@@ -1,8 +1,8 @@
 <?php
-include('../../conexion/configuration.php');
-include('../../layout/header.php');
-include('../../layout/sidebar.php');
-include('../../layout/navbar.php');
+include('../../config/connexion.php');
+include('../layout/header.php');
+include('../layout/sidebar.php');
+include('../layout/navbar.php');
 
 
 $ciudad_id = $_GET['id'];
@@ -40,5 +40,5 @@ $ciudad = mysqli_fetch_assoc($resultadoCiudad);
   </div>
 </div>
 <?php
-include('../../layout/footer.php');
+include('../layout/footer.php');
 ?>

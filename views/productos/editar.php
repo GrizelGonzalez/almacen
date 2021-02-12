@@ -1,9 +1,9 @@
 <?php
 
-include('../../conexion/configuration.php');
-include('../../layout/header.php');
-include('../../layout/sidebar.php');
-include('../../layout/navbar.php');
+include('../../config/connexion.php');
+include('../layout/header.php');
+include('../layout/sidebar.php');
+include('../layout/navbar.php');
 
 $consulta = "SELECT * FROM categoria";
 $resultado =  mysqli_query($conexion, $consulta);
@@ -72,6 +72,6 @@ $producto = mysqli_fetch_assoc($resultadoProducto);
 </div>
 
 <?php
-include('../../layout/footer.php');
+include('../layout/footer.php');
 ?>
-<script src="../../validations/productos/form-validation.js"></script>
+<script src="../../public/validations/productos/form-validation.js"></script>

@@ -66,7 +66,7 @@ include('../../layout/navbar.php');
                     <div class="card card-profile">
                         <div class="card-avatar">
                             <a href="javascript:;">
-                                <img class="img" src="../../assets/img/faces/avatar.jpg" />
+                                <img class="img" src="../../public/assets/img/faces/avatar.jpg" />
                             </a>
                         </div>
                         <div class="card-body">

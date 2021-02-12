@@ -1,8 +1,8 @@
 <?php
-include('../../conexion/configuration.php');
-include('../../layout/header.php');
-include('../../layout/sidebar.php');
-include('../../layout/navbar.php');
+include('../../config/connexion.php');
+include('../layout/header.php');
+include('../layout/sidebar.php');
+include('../layout/navbar.php');
 
 
 $categoria_id = $_GET['id'];
@@ -40,5 +40,5 @@ $categoria = mysqli_fetch_assoc($resultadoCategoria);
   </div>
 </div>
 <?php
-include('../../layout/footer.php');
+include('../layout/footer.php');
 ?>
