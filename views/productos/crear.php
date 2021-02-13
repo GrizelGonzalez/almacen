@@ -6,7 +6,7 @@ include('../layout/sidebar.php');
 include('../layout/navbar.php');
 
 $consulta = "SELECT * FROM categoria";
-$resultado =  mysqli_query($conexion, $consulta);
+$resultado =  mysqli_query($connexion, $consulta);
 ?>
 <div class="content">
   <div class="container-fluid">

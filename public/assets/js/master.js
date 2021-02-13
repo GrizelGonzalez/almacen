@@ -53,7 +53,7 @@ var unhighlight = function(element) {
     $(element)
       .closest('.form-group')
       .removeClass('has-danger')
-    .addClass('has-success');
+      .addClass('has-success');
 };
 
 var submitHandler = function(form) {

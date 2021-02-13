@@ -15,10 +15,10 @@ $consulta = "UPDATE producto SET nombre = '$nombre',
                                    stock = '$stock',
                                    categoria_id = '$categoria'  WHERE id = {$id}";
 
-if (mysqli_query($conexion, $consulta)) {
+if (mysqli_query($connexion, $consulta)) {
     header("Location: ../../views/productos/lista.php");
     $_SESSION['response'] = 'success,Registro actualizado correctamente';
 } else {
-    $_SESSION['response'] = "danger," . mysqli_error($conexion);
+    $_SESSION['response'] = "danger," . mysqli_error($connexion);
     header('Location: ../../views/productos/editar.php?id='.$id);
 }

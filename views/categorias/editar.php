@@ -7,7 +7,7 @@ include('../layout/navbar.php');
 
 $categoria_id = $_GET['id'];
 $consultaCategoria = "SELECT * FROM categoria WHERE id = {$categoria_id}";
-$resultadoCategoria =  mysqli_query($conexion, $consultaCategoria);
+$resultadoCategoria =  mysqli_query($connexion, $consultaCategoria);
 $categoria = mysqli_fetch_assoc($resultadoCategoria);
 ?>
 

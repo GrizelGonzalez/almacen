@@ -19,7 +19,7 @@ include('../layout/sidebar.php');
 include('../layout/navbar.php');
 
 $consulta = "SELECT * FROM ciudad";
-$ciudades = $conexion->query($consulta);
+$ciudades = $connexion->query($consulta);
 ?>
 
 <div class="content">

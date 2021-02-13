@@ -19,7 +19,7 @@ include('../layout/sidebar.php');
 include('../layout/navbar.php');
 
 $consulta = "SELECT c.* FROM categoria c";
-$categorias = $conexion->query($consulta);
+$categorias = $connexion->query($consulta);
 ?>
 
 <div class="content">

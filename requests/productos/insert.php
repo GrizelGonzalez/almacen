@@ -9,10 +9,10 @@ $categoria = $_POST['categoria'];
 
 $consulta = "INSERT INTO  producto (nombre,descripcion, precio, stock, categoria_id) VALUES ('$nombre', '$descripcion', $precio,$stock,$categoria)";
 
-if (mysqli_query($conexion, $consulta)) {
+if (mysqli_query($connexion, $consulta)) {
     header("Location: ../../views/productos/lista.php");
     $_SESSION['response'] = 'success,Registro creado correctamente';
 } else {
-    $_SESSION['response'] = "danger," . mysqli_error($conexion);
+    $_SESSION['response'] = "danger," . mysqli_error($connexion);
     header('Location: ../../views/productos/crear.php');
 }

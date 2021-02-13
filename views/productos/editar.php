@@ -6,11 +6,11 @@ include('../layout/sidebar.php');
 include('../layout/navbar.php');
 
 $consulta = "SELECT * FROM categoria";
-$resultado =  mysqli_query($conexion, $consulta);
+$resultado =  mysqli_query($connexion, $consulta);
 
 $producto_id = $_GET['id'];
 $consultaProducto = "SELECT * FROM producto WHERE id = {$producto_id}";
-$resultadoProducto =  mysqli_query($conexion, $consultaProducto);
+$resultadoProducto =  mysqli_query($connexion, $consultaProducto);
 $producto = mysqli_fetch_assoc($resultadoProducto);
 ?>
 <div class="content">

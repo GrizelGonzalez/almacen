@@ -19,7 +19,7 @@ include('../layout/sidebar.php');
 include('../layout/navbar.php');
 
 $consulta = "SELECT p.*, c.nombre as categoria FROM producto p INNER JOIN categoria c ON p.categoria_id = c.id;";
-$productos = $conexion->query($consulta);
+$productos = $connexion->query($consulta);
 ?>
 <div class="content">
   <div class="container-fluid">

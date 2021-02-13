@@ -8,10 +8,10 @@ $nombre = $_POST['nombre'];
 
 $consulta = "UPDATE categoria SET nombre = '$nombre'  WHERE id = {$id}";
 
-if (mysqli_query($conexion, $consulta)) {
+if (mysqli_query($connexion, $consulta)) {
     header("Location: ../../views/categorias/lista.php");
     $_SESSION['response'] = 'success,Registro actualizado correctamente';
 } else {
-    $_SESSION['response'] = "danger," . mysqli_error($conexion);
+    $_SESSION['response'] = "danger," . mysqli_error($connexion);
     header('Location: ../../views/categorias/editar.php?id='.$id);
 }

@@ -35,4 +35,4 @@ include('../layout/navbar.php');
 <?php
 include('../layout/footer.php');
 ?>
-<script src="../../public/validations/categorias/form-validation.js"></script>
+<script src="../../public/validations/ciudad/form-validation.js"></script>

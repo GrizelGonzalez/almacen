@@ -1,13 +1,13 @@
 <?php
 require ('env.php');
 
-$host = getenv('DATABASE_HOST');
-$db = getenv('DATABASE_NAME');
-$user = getenv('DATABASE_USERNAME');
-$pass = getenv('DATABASE_PASSWORD');
+$hostname = getenv('DATABASE_HOST');
+$database = getenv('DATABASE_NAME');
+$username = getenv('DATABASE_USERNAME');
+$password = getenv('DATABASE_PASSWORD');
 
-$conexion = mysqli_connect($host, $user, $pass, $db);
-mysqli_set_charset($conexion, 'utf8');
+$connexion = mysqli_connect($hostname, $username, $password, $database);
+mysqli_set_charset($connexion, 'utf8');
 
 // Check connection
 if (mysqli_connect_errno()) {
