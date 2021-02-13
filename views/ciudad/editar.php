@@ -23,12 +23,12 @@ $ciudad = mysqli_fetch_assoc($resultadoCiudad);
           </div>
           <div class="card-body">
             <h3>Editar una ciudad</h3>
-            <form action="../../requests/ciudad/update.php" method="POST">
+            <form action="../../requests/ciudad/update.php" method="POST" id="form">
             <input type="hidden" name="id" value="<?php echo $ciudad['id'] ?>">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="nombre">Nombre:</label>
-                  <input class="form-control" type="text" name="nombre" value="<?php echo $ciudad['nombre'] ?>" required>
+                  <input class="form-control" type="text" id="nombre" name="nombre" value="<?php echo $ciudad['nombre'] ?>" required>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary">Actualizar</button>
@@ -42,3 +42,4 @@ $ciudad = mysqli_fetch_assoc($resultadoCiudad);
 <?php
 include('../layout/footer.php');
 ?>
+<script src="../../public/validations/categorias/form-validation.js"></script>

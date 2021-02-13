@@ -17,11 +17,11 @@ include('../layout/navbar.php');
           </div>
           <div class="card-body">
             <h3>Guardar una nueva categoría</h3>
-            <form action="../../requests/categorias/insert.php" method="POST">
+            <form action="../../requests/categorias/insert.php" method="POST" id="form">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="nombre">Nombre:</label>
-                  <input class="form-control" type="text" name="nombre" required>
+                  <input class="form-control" type="text" id="nombre" name="nombre" required>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary">Guardar</button>
@@ -35,3 +35,4 @@ include('../layout/navbar.php');
 <?php
 include('../layout/footer.php');
 ?>
+<script src="../../public/validations/categorias/form-validation.js"></script>
