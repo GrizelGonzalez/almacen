@@ -6,12 +6,16 @@ include('../layout/sidebar.php');
 include('../layout/navbar.php');
 
 $consulta = "SELECT * FROM categoria";
-$resultado =  mysqli_query($connexion, $consulta);
+$resultado = mysqli_query($connexion, $consulta);
 
 $producto_id = $_GET['id'];
 $consultaProducto = "SELECT * FROM producto WHERE id = {$producto_id}";
-$resultadoProducto =  mysqli_query($connexion, $consultaProducto);
+$resultadoProducto = mysqli_query($connexion, $consultaProducto);
 $producto = mysqli_fetch_assoc($resultadoProducto);
+
+
+$consultaTienda = "SELECT * FROM tienda";
+$tiendas = $connexion->query($consultaTienda);
 ?>
 <div class="content">
   <div class="container-fluid">
@@ -30,11 +34,13 @@ $producto = mysqli_fetch_assoc($resultadoProducto);
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="nombre">Nombre:</label>
-                  <input class="form-control" type="text" id="nombre" name="nombre" value="<?php echo $producto['nombre'] ?>" required>
+                  <input class="form-control" type="text" id="nombre" name="nombre"
+                         value="<?php echo $producto['nombre'] ?>" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="descripcion">Descripción:</label>
-                  <input class="form-control" type="text" id="descripcion" name="descripcion" value="<?php echo $producto['descripcion'] ?>" required>
+                  <input class="form-control" type="text" id="descripcion" name="descripcion"
+                         value="<?php echo $producto['descripcion'] ?>" required>
                 </div>
               </div>
               <div class="form-row">
@@ -42,25 +48,39 @@ $producto = mysqli_fetch_assoc($resultadoProducto);
                   <label for="categoria">Categoría</label>
                   <select class="form-control" id="categoria" name="categoria" required>
                     <option value="">Selecciona una categoría...</option>
-                    <?php
-                    while ($categoria = mysqli_fetch_assoc($resultado)) {
-                      if ($categoria['id'] == $producto['categoria_id']) {
-                        echo "<option value='{$categoria['id']}' selected>{$categoria['nombre']}</option>";
-                      } else {
-                        echo "<option value='{$categoria['id']}'>{$categoria['nombre']}</option>";
+                      <?php
+                      while ($categoria = mysqli_fetch_assoc($resultado)) {
+                          if ($categoria['id'] == $producto['categoria_id']) {
+                              echo "<option value='{$categoria['id']}' selected>{$categoria['nombre']}</option>";
+                          } else {
+                              echo "<option value='{$categoria['id']}'>{$categoria['nombre']}</option>";
+                          }
                       }
-                    }
-                    ?>
+                      ?>
                   </select>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="precio">Precio:</label>
-                  <input class="form-control" type="text" id="precio" name="precio" value="<?php echo $producto['precio'] ?>" required>
+                  <input class="form-control" type="text" id="precio" name="precio"
+                         value="<?php echo $producto['precio'] ?>" required>
                 </div>
                 <div class="form-group col-md-2">
                   <label for="precio">Stock:</label>
-                  <input class="form-control" type="number" id="stock" name="stock" placeholder="stock" value="<?php echo $producto['stock'] ?>" required>
+                  <input class="form-control" type="number" id="stock" name="stock" placeholder="stock"
+                         value="<?php echo $producto['stock'] ?>" required>
                 </div>
+              </div>
+              <div class="form-check">
+                <label for="nombre">Sucursales:</label><br>
+                  <?php foreach ($tiendas as $tienda) { ?>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="sucursales" name="sucursales[]" value="<?php echo $tienda['id'] ?>">
+                        <?php echo $tienda['nombre'] ?>
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                    </span>
+                    </label><br><br>
+                  <?php } ?>
               </div>
               <button type="submit" class="btn btn-primary">Actualizar</button>
             </form>
