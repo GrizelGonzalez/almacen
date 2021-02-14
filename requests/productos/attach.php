@@ -7,7 +7,7 @@ $sucursales = $_POST['sucursales'];
 $consulta = "DELETE FROM producto_has_tienda WHERE producto_id = $id";
 
 if (mysqli_query($connexion, $consulta)) {
-    if (count($sucursales) != 0) {
+    if (count($sucursales) > 0) {
         for ($i = 0; $i <= count($sucursales); $i++) {
             mysqli_query($connexion, "INSERT INTO producto_has_tienda (producto_id, tienda_id) VALUES ($id, $sucursales[$i])");
         }
