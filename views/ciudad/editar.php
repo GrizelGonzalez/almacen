@@ -6,8 +6,8 @@ include('../layout/navbar.php');
 
 
 $ciudad_id = $_GET['id'];
-$consultaCiudad = "SELECT * FROM ciudad WHERE id = {$ciudad_id}";
-$resultadoCiudad =  mysqli_query($connexion, $consultaCiudad);
+$consulta = "SELECT * FROM ciudad WHERE id = {$ciudad_id}";
+$resultadoCiudad =  mysqli_query($connexion, $consulta);
 $ciudad = mysqli_fetch_assoc($resultadoCiudad);
 ?>
 

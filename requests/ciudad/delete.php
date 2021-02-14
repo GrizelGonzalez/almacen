@@ -3,9 +3,9 @@ session_start();
 include "../../config/connexion.php";
 
 $id = $_GET['id'];
-$delete = "DELETE FROM ciudad where id = '$id'";
+$consulta = "DELETE FROM ciudad where id = '$id'";
 
-if (mysqli_query($connexion, $delete)) {
+if (mysqli_query($connexion, $consulta)) {
     header("Location: ../../views/ciudad/lista.php");
     $_SESSION['response'] = 'success,Registro eliminado correctamente';
 } else {
